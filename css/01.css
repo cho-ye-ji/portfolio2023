@@ -1,0 +1,84 @@
+/* #1ba894: #1ba894; */
+/* lang부분 스타일 동일함 */
+/* 경력 및 이력 바로가기 버튼 좌우 더 넓게 */
+
+
+
+/* 높이값 100으로 제한한거 체크해야할 듯 */
+
+@media (max-width:1024px) and (min-width:768px){
+
+}
+
+@media (max-width:767px){
+    /* .cont_right .skillBtn{ 
+        left: calc(50% - 25px);
+    } */
+    #intro .moon-bg img { 
+        width: 330px; height: 330px; object-fit: contain;}
+    #header .wrapper ul{ display: none;}
+    #header .wrapper i.fa-solid.fa-bars{ display: block; }
+
+    /* #skill { height: auto !important; } */
+    /* #skill .wrapper { height: 100% !important; } */
+    #skill .wrapper .cont_btm{ margin-top: 0; flex-direction: column;}
+    #skill .wrapper .cont_btm .cont_left img{ 
+        width: 100%; height: 150px; object-fit: cover; overflow: hidden;}
+    #skill .wrapper .cont_btm .cont_left{
+        width: 100%; margin: 0 auto; flex: 1;}
+    /* #skill .wrapper .cont_btm .cont_left,
+    #skill .wrapper .cont_btm .cont_right{position: relative; flex: 3;} */
+    #skill .wrapper .cont_btm .cont_right{
+        position: relative; flex: 2; align-items: flex-start;
+    }
+    /* #skill .wrapper .cont_btm .cont_right .skillBtn {
+        position: absolute; top: 100%;
+    }    */
+
+   #skill .wrapper .cont_btm .cont_right p{ line-height: 2; font-size: 14px;}  
+    
+    #attitude{ height:auto !important; margin-top: 24px;}
+    #attitude .wrapper .cont_btm .tech-wrap ul.tech-list{ gap: 8px;}
+    /*
+    #skill .cont-right, #skill .cont-left{ 
+        flex:1; height:auto !important;}  */
+    #career { padding-bottom: 0;}    
+    #career .btm_cont .cont-menu li.project-item{ width:50% !important;}    
+    #career .wrapper .cont_btm .btm_cont ul.cont-menu li.project-item img{ 
+        height: 260px !important;
+    }
+    /* Btn */
+    #career .wrapper .cont_btm #moreButton { 
+        position: relative; bottom: 0%;}  
+
+
+    #career .btm_cont .cont-menu li.project-item.hidden:first-child{ display: block !important;}    
+    #career .wrapper .cont_btm .btm_cont ul.cont-menu li.project-item .project-details ul.project-tech{
+        gap: 3px;
+    }
+    
+    #attitude .wrapper .cont_btm div ul li{ 
+        font-size: 15px; opacity: 1; 
+        line-height: 36px;
+    }
+
+    #attitude .wrapper .cont_btm div h2{margin: 60px 0 30px 0;}
+
+    #note .wrapper .cont_btm .post-list .post-item a div h3{
+        font-size: 20px;
+    }
+    #note .wrapper .cont_btm .post-list .post-item a div p{
+        font-size: 14px; line-height: 1.4;
+    }
+    #side-nav{ display: none;}
+} 
+@media (max-width:400px){
+    #note .wrapper .cont_btm .post-list .post-item a div h3{
+        font-size: 18px;
+    }
+    #side-nav{ display: none;}
+}
+@media (max-width:335px){
+
+}
+

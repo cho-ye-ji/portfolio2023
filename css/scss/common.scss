@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+@import "style.scss";
+@import "header.scss";
+@import "contents.scss";
+@import "_variable.scss";
+
+@import url(./header.css);
+@import url(./common.css);
+@import url(./contents.css);
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+@import url("https://font.elice.io/css?family=Elice+DX+Neolli");
+
+.mont { font-family: "Montserrat"; }
+.nanum { font-family: "nanumSquareNeo"; }
+.gmarket { font-family: "gmarket"; }
+.elice { font-family: 'Elice';}
+
+.hide{ display: none;}
+.easeinout { transition-delay: 2s; transition-timing-function: ease-in-out; }
+/* 공백 초기화 */
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,
+input,legend,li,ol,p,select,table,td,textarea,th,ul,figure,figcaption {
+    margin: 0; padding: 0; list-style: none;}
+body{/*  아이폰 노치 대응 */ 
+    width: 100%;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    max-width: 1920px;  margin: 0 auto;
+    font-family: "Montserrat";
+    background-color: #000; color:#fff;
+}
+a{ text-decoration: none; color: #fff;}
+
+// 배경
+#intro .star_bg, #skill .star_bg{
+    position: absolute;
+    overflow: hidden;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    -webkit-animation: starBg 20s linear infinite forwards;
+    animation: starBg 20s linear infinite forwards;
+    background-image: url(../img/visual-star.png);
+    background-position: left center;
+    background-size: 50% 100%;
+}
+@keyframes starBg{
+    0%{left: -20vw;}
+    50%{left: 0vw;}
+    100%{left: 20vw;}
+    // 0%{left: -100vw;}
+    // 50%{left: 100vw;}
+    // 100%{left: -100vw;}
+}
+/* contents common section title */
+#main{ 
+    position: relative; left: 0; top: 0; 
+    // width: calc(100vw - 17px);
+    width: 100%;
+
+    #skill, #attitude, #intro{  
+        width: 100%;  height: 100vh;
+    }
+}
+
+.wrapper{
+    width: 95%; 
+    margin: 0 auto;  
+    .cont_tit { 
+        width: 100%;
+        font-size: 38px; text-align: center; font-weight: bold;
+        margin-bottom: 50px;
+        // margin: 50px auto; 
+    }
+}
+
+// 공통 물결
+.cont_tit{
+    .wave_text{
+        position: relative; 
+        text-align: left; 
+        span{font-weight: 900;
+            font-size: 40px; letter-spacing: -4px; 
+            position: relative; left: 0;
+            animation: wave_text 2s infinite; 
+            &:nth-child(1){ animation-delay: 0.1s;}
+            &:nth-child(2){ animation-delay: 0.2s;}
+            &:nth-child(3){ animation-delay: 0.3s;}
+            &:nth-child(4){ animation-delay: 0.4s;}
+            &:nth-child(5){ animation-delay: 0.5s;}
+            &:nth-child(6){ animation-delay: 0.6s;}
+        }
+        @keyframes wave_text{
+            0% { top: 0; } 
+            20% { top: -0.2rem; } 
+            40% { top: 0 } 
+            60% { top: 0 } 
+            80% { top: 0; }  
+            100% { top: 0 }
+        }
+    } 
+}  
+
+/* 임시 간격 */
+// section{margin-bottom: 200px;} 
+
+// #header{ position: relative;}
+#footer{
+    position: relative; bottom: 0; margin-top: 50px; 
+    height: auto;
+    padding: 0 30px;
+        p{ 
+            font-size: 14px;
+            line-height: 20px;
+            color: #d1d1d1; text-align: center; 
+            margin: 60px auto;
+            span{
+                font-size: 13px; 
+                display: block;
+            }
+        }
+    }
+
+
+/* 아이폰 노치 대응 */
+/* iOS 11.0 버전 */
+/* constant(safe-area-inset-top)
+constant(safe-area-inset-right)
+constant(safe-area-inset-bottom)
+constant(safe-area-inset-left) */
+ /* iOS 11.2 이상 */
+/* env(safe-area-inset-top)
+env(safe-area-inset-right)
+env(safe-area-inset-bottom)
+env(safe-area-inset-left) */
