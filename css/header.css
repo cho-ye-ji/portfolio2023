@@ -1,42 +1,20 @@
-#header {
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  font-size: 14px;
-  position: absolute !important;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.2549019608);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#header .wrapper {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#header .wrapper ul {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-}
-#header .wrapper ul.active {
-  display: block;
-  position: absolute;
-  right: 2.5%;
-  top: 80px;
-  text-align: center;
-}
-#header .wrapper .fa-solid.fa-bars,
-#header .wrapper .fa-solid.fa-xmark {
-  display: none;
+#header{width:100%;height:80px;line-height:80px;font-size:14px;position:absolute !important;z-index:100;background:rgba(0,0,0,.2549019608);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}#header .wrapper{width:90%;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}#header .wrapper ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1.1rem}#header .wrapper ul.active{display:block;position:absolute;right:2.5%;top:80px;text-align:center}#header .wrapper .fa-solid.fa-bars,#header .wrapper .fa-solid.fa-xmark{display:none;font-size:24px}#header.drop{width:100%;left:0;position:fixed !important;-webkit-animation:dropHeader .3s;animation:dropHeader .3s}@-webkit-keyframes dropHeader{0%{top:-5rem}100%{top:0}}@keyframes dropHeader{0%{top:-5rem}100%{top:0}}lay: none;
   font-size: 24px;
 }
 #header.drop {
+  width: 100%;
+  left: 0;
   position: fixed !important;
-  animation: dropHeader 0.3s;
+  -webkit-animation: dropHeader 0.3s;
+          animation: dropHeader 0.3s;
+}
+@-webkit-keyframes dropHeader {
+  0% {
+    top: -5rem;
+  }
+  100% {
+    top: 0;
+  }
 }
 @keyframes dropHeader {
   0% {

@@ -21,6 +21,7 @@
         .fa-solid.fa-xmark{ display: none; font-size: 24px;}
     }
     &.drop {
+        width: 100%; left: 0;
         position: fixed !important;
         animation: dropHeader 0.3s;
     }
